@@ -5,7 +5,10 @@
         <div class="col-md-3" *ngFor="let tempProduct of productList">
           <div class="product-box">
             <a routerLink="/products/{{ tempProduct.productId }}">
-              <img src="assets/mtns.png" class="img-responsive" />
+              <img
+                src="assets/{{ tempProduct.category }}.png"
+                class="img-responsive"
+              />
             </a>
             <a routerLink="/products/{{ tempProduct.productId }}">
               <h1>{{ tempProduct.productName }}</h1>
