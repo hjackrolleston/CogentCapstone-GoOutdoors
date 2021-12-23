@@ -23,23 +23,24 @@ import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { EditCartComponent } from './components/edit-cart/edit-cart.component';
 
-
 const route: Routes = [
-  {path: 'categories/:categoryName', component: ProductViewComponent},
-  {path: 'categories', component: CategoryViewComponent},
-  {path: 'products/:id', component: ProductSpecsComponent},
-  {path: 'products', component: ProductViewComponent},
-  {path: 'addProduct', component: ProductAddComponentComponent},
-  {path: 'login', component: LoginComponent},
-  {path: 'cart', component: EditCartComponent},
-  {path: 'cart/:cartId', component:EditCartComponent},
-  {path: 'cart/user/:userId', component:EditCartComponent},
-  {path: 'contact', component:ContactComponent},
-  {path: 'about', component: AboutComponent},
-  {path: 'signup', component: RegisterComponent},
-  {path: 'login', component:LoginComponent},
-  {path: 'token', component:ProfileComponent},
-  {path: '**', redirectTo: 'categories', pathMatch: 'full'}
+  { path: 'categories/:categoryName', component: ProductViewComponent },
+  { path: 'categories', component: CategoryViewComponent },
+  { path: 'products/:id', component: ProductSpecsComponent },
+  { path: 'products', component: ProductViewComponent },
+  { path: 'addProduct', component: ProductAddComponentComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'cart', component: EditCartComponent },
+  { path: 'cart/:cartId', component: EditCartComponent },
+  { path: 'cart/user/:userId', component: EditCartComponent },
+  { path: 'contact', component: ContactComponent },
+  { path: 'about', component: AboutComponent },
+  { path: 'signup', component: RegisterComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'token', component: ProfileComponent },
+
+  { path: 'accountInfo', component: ProfileComponent },
+  { path: '**', redirectTo: 'categories', pathMatch: 'full' },
 ];
 
 @NgModule({
@@ -59,8 +60,7 @@ const route: Routes = [
     ProfileComponent,
     AboutComponent,
     ContactComponent,
-    EditCartComponent
-
+    EditCartComponent,
   ],
   imports: [
     BrowserModule,
@@ -68,9 +68,9 @@ const route: Routes = [
     HttpClientModule,
     RouterModule.forRoot(route),
     NgbModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [authInterceptorProviders],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
